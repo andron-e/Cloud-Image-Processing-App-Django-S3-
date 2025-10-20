@@ -1,0 +1,3 @@
+<h2>Filter: {{ job.filter_name }}</h2>
+<p><img src="{{ job.processed.url }}" alt="processed" style="max-width: 600px;"></p>
+<p><a href="{% url 'download' job.id %}">Download processed image</a></p>
