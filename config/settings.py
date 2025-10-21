@@ -59,6 +59,7 @@ AWS_S3_REGION_NAME = os.getenv("US East (Ohio) us-east-2")
 AWS_S3_SIGNATURE_VERSION = "s3v4"
 AWS_QUERYSTRING_AUTH = False  # cleaner public URLs for demo
 
+
 # Optional: if using keys locally (prefer IAM role on EC2)
 AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
