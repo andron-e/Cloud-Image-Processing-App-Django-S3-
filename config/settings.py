@@ -55,8 +55,8 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # Media (we’ll serve from S3 in prod; local fallback below)
 DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
 AWS_STORAGE_BUCKET_NAME = os.getenv("cis4517-image-app")
-AWS_S3_REGION_NAME = os.getenv("US East (Ohio) us-east-2")
-AWS_S3_SIGNATURE_VERSION = "s3v4"
+AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
+AWS_S3_REGION_NAME = os.getenv("AWS_S3_REGION_NAME", "us-east-2")
 AWS_QUERYSTRING_AUTH = False  # cleaner public URLs for demo
 
 
