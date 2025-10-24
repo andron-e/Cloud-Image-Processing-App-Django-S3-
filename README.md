@@ -16,3 +16,23 @@ cp .env.example .env
 # edit .env values (SECRET, BUCKET, REGION)
 python manage.py migrate
 python manage.py runserver 0.0.0.0:8000
+
+
+## Start Up   load up EC2 and cd opt/imageapp/
+Enter in Ubuntu
+sudo systemctl start imageapp
+sudo systemctl start nginx
+
+Test system
+systemctl status imageapp
+systemctl status nginx
+
+Test website
+http://3.17.251.207
+
+
+Encountered errors: EC2 public dns and ip address changed after stop and start.
+- associated EC2 with Elastic IP
+
+To demo:
+Just start ec2
